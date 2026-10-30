@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UsPirit Academy — Marketing Way</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5ff;--card:#fff;--ink:#17163a;--mut:#5b5a7e;--pri:#4b3fe0;--onpri:#fff;--acc:#ffffff;--line:#e3e1f7;--fn:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12112b;--card:#1c1b3d;--ink:#f0efff;--mut:#a9a8cf;--pri:#8f86ff;--onpri:#12112b;--line:#2d2c58}}
+:root[data-theme="dark"]{--bg:#12112b;--card:#1c1b3d;--ink:#f0efff;--mut:#a9a8cf;--pri:#8f86ff;--onpri:#12112b;--line:#2d2c58}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--fn)}
+a{color:inherit}h1,h2,h3{line-height:1.15;margin:0}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-weight:800;text-decoration:none;font-size:18px}
+nav{display:flex;gap:22px;font-size:15px;font-weight:600;overflow-x:auto}
+nav a{text-decoration:none;color:var(--mut);white-space:nowrap}nav a:hover{color:var(--pri)}
+.btn{display:inline-block;background:var(--pri);color:var(--onpri);font-weight:800;text-decoration:none;padding:14px 26px;border-radius:999px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.y{background:var(--acc);color:#17163a;box-shadow:inset 0 0 0 2px var(--pri)}
+:focus-visible{outline:3px solid var(--pri);outline-offset:3px}
+.hero{padding:72px 0 56px}
+.hero h1{font-size:clamp(34px,6vw,64px);font-weight:800;max-width:14ch;letter-spacing:-.02em}
+.hero p{font-size:20px;color:var(--mut);max-width:34em;margin:20px 0 28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:44px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}
+.stat b{display:block;font-size:30px;font-weight:800;color:var(--pri)}.stat span{color:var(--mut);font-size:15px}
+.hero h1,.hero p,.hero .btn,.stat{animation:up .7s both}.hero p{animation-delay:.12s}.hero .btn{animation-delay:.24s}
+.stat:nth-child(1){animation-delay:.34s}.stat:nth-child(2){animation-delay:.42s}.stat:nth-child(3){animation-delay:.5s}.stat:nth-child(4){animation-delay:.58s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.strip{background:var(--pri);color:var(--onpri);overflow:hidden;white-space:nowrap;padding:14px 0;font-weight:800}
+.strip div{display:inline-block;animation:run 28s linear infinite}
+@keyframes run{to{transform:translateX(-50%)}}
+section{padding:64px 0}h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin-bottom:12px;letter-spacing:-.01em}
+.lead{color:var(--mut);max-width:42em;margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:24px}.card p{margin:0;color:var(--mut)}.card ul{margin:0;padding-left:20px;color:var(--mut)}
+.price{margin-top:auto;font-size:28px;font-weight:800;color:var(--pri)}
+.tag{align-self:flex-start;background:var(--acc);color:#17163a;box-shadow:inset 0 0 0 2px var(--pri);font-weight:800;font-size:13px;padding:4px 12px;border-radius:999px}
+.card.hot{border:2px solid var(--pri)}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;padding:0;list-style:none;margin:0}
+.feat li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;font-weight:600}
+.story{background:var(--pri);color:var(--onpri);border-radius:28px;padding:40px;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center}
+.story h2{margin:0 0 12px}.story p{margin:0}
+.ab{display:flex;align-items:center;gap:14px;font-weight:800;font-size:22px;flex-wrap:wrap}
+.ab i{font-style:normal;background:var(--acc);color:#17163a;padding:8px 16px;border-radius:999px}
+.ab span{opacity:.7}
+.team{border:2px dashed var(--line);border-radius:24px;padding:32px;color:var(--mut)}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:800;padding:18px 22px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";font-size:24px;color:var(--pri);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0;padding:0 22px 20px;color:var(--mut);animation:fade .3s}@keyframes fade{from{opacity:0}}
+.cta{background:var(--card);border:1px solid var(--line);border-radius:32px;padding:48px 28px;text-align:center}
+.cta p{color:var(--mut);max-width:36em;margin:0 auto 24px}.cta .btn{margin:4px}
+footer{padding:36px 0;color:var(--mut);font-size:15px;border-top:1px solid var(--line)}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+#bar{position:fixed;top:0;left:0;right:0;height:4px;background:var(--pri);transform:scaleX(0);transform-origin:0 50%;z-index:10}
+.js .rv{opacity:0;transform:translateY(48px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media(max-width:720px){nav{display:none}.story{padding:28px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<header><div class="w"><a class="logo" href="#top">UsPirit Academy</a>
+<nav><a href="#programs">Программы</a><a href="#formats">Форматы</a><a href="#results">Результаты</a><a href="#geo">Города</a><a href="#faq">Вопросы</a></nav>
+<a class="btn y" href="#join" style="padding:9px 18px">Записаться</a></div></header>
+
+<main id="top">
+<div class="hero"><div class="w">
+<h1>Твой путь в мир Digital начинается здесь</h1>
+<p>Академия подготовки специалистов в Digital, SMM, интернет-маркетинге и предпринимательстве. Живые занятия с наставниками, практика и старт с нуля.</p>
+<a class="btn" href="#programs">Выбрать программу</a>
+<div class="stats">
+<div class="stat"><b>3</b><span>образовательные программы</span></div>
+<div class="stat"><b>3</b><span>города: Бишкек, Ош, Санкт-Петербург</span></div>
+<div class="stat"><b>25</b><span>участников из Японии прошли обучение в Бишкеке</span></div>
+<div class="stat"><b>0</b><span>опыта нужно, чтобы начать</span></div>
+</div></div></div>
+
+<div class="strip" aria-hidden="true"><div>SMM • Контент-маркетинг • Мобилография • Видеомонтаж • Графический дизайн • Таргетированная реклама • Основы маркетинга • SMM • Контент-маркетинг • Мобилография • Видеомонтаж • Графический дизайн • Таргетированная реклама • Основы маркетинга • </div></div>
+
+<section id="about"><div class="w">
+<h2>О нашей академии</h2>
+<p class="lead">UsPirit Academy помогает осваивать востребованные профессии, получать практические навыки и развивать собственные проекты. Каждый студент может начать с нуля, получить поддержку опытных наставников и применить знания в реальной работе. Наша философия: знания, люди, будущее.</p>
+<ul class="feat">
+<li>Живые занятия с наставниками</li><li>Практические задания и проекты</li><li>Обратная связь и поддержка преподавателей</li><li>Востребованные digital-инструменты</li><li>Можно начать без опыта</li><li>Возможность присоединиться к команде академии</li>
+</ul></div></section>
+
+<section id="programs"><div class="w">
+<h2>Выберите своё направление</h2>
+<p class="lead">Программы для тех, кто хочет войти в digital, запустить своё дело или быстро освоить основы SMM.</p>
+<div class="grid">
+<article class="card hot"><span class="tag">Основная программа</span><h3>Digital Expert</h3>
+<p>Комплексная программа по современным digital-профессиям. Вы научитесь вести соцсети, создавать контент, продвигать проекты и работать с клиентами.</p>
+<ul><li>SMM</li><li>Контент-маркетинг</li><li>Мобилография</li><li>Видеомонтаж</li><li>Графический дизайн</li><li>Таргетированная реклама</li><li>Основы маркетинга</li></ul>
+<div class="price">300 $</div><a class="btn" href="#join">Записаться</a></article>
+<article class="card"><h3>Индивидуальный предприниматель</h3>
+<p>Для тех, кто хочет развивать собственное дело и запускать бизнес-проекты.</p>
+<ul><li>Основы предпринимательства</li><li>Развитие бизнес-идей</li><li>Маркетинг</li><li>Работа с клиентами</li><li>Продвижение собственного продукта</li></ul>
+<div class="price">450 $</div><a class="btn" href="#join">Записаться</a></article>
+<article class="card"><h3>Express Course</h3>
+<p>Интенсив для знакомства с основами SMM и digital-маркетинга: базовые знания и главные инструменты продвижения.</p>
+<div class="price" style="font-size:18px">Стоимость и программу уточняйте в нашем Telegram-боте</div><a class="btn" href="https://t.me/uspirit_bot">Открыть бота</a></article>
+</div></div></section>
+
+<section id="formats"><div class="w">
+<h2>Форматы обучения</h2>
+<p class="lead">У каждого свой график и предпочтения, поэтому мы развиваем два формата.</p>
+<div class="grid">
+<article class="card"><h3>Онлайн</h3><p>Не записанные видеоуроки, а живые онлайн-созвоны с наставниками. Вы задаёте вопросы, разбираете практику и получаете обратную связь сразу от преподавателя.</p></article>
+<article class="card"><h3>Офлайн</h3><p>Очные занятия, практические задания и знакомство с единомышленниками. Офлайн-направление развивается в Кыргызстане, а в Санкт-Петербурге запускается первый очный поток.</p></article>
+</div></div></section>
+
+<section id="results"><div class="w">
+<div class="story"><div><h2>История выпускника: Савелий</h2>
+<p>Савелий начал с нуля и прошёл обучение в UsPirit Academy. Сегодня он часть нашей команды и работает менеджером академии.</p></div>
+<div class="ab"><span>Точка А</span><i>0 ₽</i><span>Точка Б</span><i>113 000 ₽</i></div></div>
+</div></section>
+
+<section id="intl"><div class="w">
+<h2>Международные проекты</h2>
+<p class="lead">Мы открыты к сотрудничеству с международными организациями, компаниями и образовательными учреждениями.</p>
+<article class="card"><h3>Корпоративное обучение вместе с JICA Kyrgyz Republic</h3>
+<p>В Бишкеке стартовало целевое обучение для 25 участников из Японии на английском языке: мобильная фотография, видеосъёмка и создание цифрового контента.</p></article>
+</div></section>
+
+<section id="geo"><div class="w">
+<h2>Где мы работаем</h2>
+<div class="grid">
+<article class="card"><h3>Бишкек</h3><p>Образовательные и корпоративные проекты.</p></article>
+<article class="card"><h3>Ош</h3><p>Обучение студентов и развитие образовательного сообщества.</p></article>
+<article class="card"><h3>Санкт-Петербург</h3><p>Развитие офлайн-обучения и запуск первого очного потока.</p></article>
+<article class="card"><h3>Онлайн</h3><p>Учитесь из любой точки, независимо от вашего местоположения.</p></article>
+</div></div></section>
+
+<section id="bot"><div class="w">
+<h2>Наш Telegram-бот</h2>
+<p class="lead">Цифровой помощник академии отвечает быстрее, чем ждать менеджера.</p>
+<ul class="feat"><li>Направления обучения</li><li>Стоимость курсов</li><li>Ближайшие наборы</li><li>Подробности об академии</li><li>Ответы на частые вопросы</li><li>Связь с менеджером</li></ul>
+<p style="margin:28px 0 0"><a class="btn" href="https://t.me/uspirit_bot">Открыть Telegram-бота</a></p>
+</div></section>
+
+<section id="team"><div class="w">
+<h2>Наша команда</h2>
+<p class="lead">Наставники делятся практическим опытом и сопровождают студентов на всём пути обучения.</p>
+<div class="team">Здесь появятся фотографии основателя, наставников и менеджеров с должностями, специализацией и биографией.</div>
+</div></section>
+
+<section id="faq"><div class="w">
+<h2>Частые вопросы</h2>
+<details><summary>Можно ли начать обучение с нуля?</summary><p>Да. Программы рассчитаны в том числе на тех, кто только знакомится с digital-сферой.</p></details>
+<details><summary>Нужен ли опыт в SMM?</summary><p>Нет, для программы с подготовкой с нуля предварительный опыт не обязателен.</p></details>
+<details><summary>Как проходит онлайн-обучение?</summary><p>В формате живых онлайн-созвонов с наставниками, а не просмотра заранее записанных видеоуроков.</p></details>
+<details><summary>Можно ли учиться офлайн?</summary><p>Да, академия развивает очное направление в городах присутствия. Доступность потока уточняйте у менеджера.</p></details>
+<details><summary>Можно ли совмещать обучение с работой или учёбой?</summary><p>Это зависит от расписания выбранной программы. Подробности расскажет менеджер.</p></details>
+<details><summary>Помогаете ли вы после окончания курса?</summary><p>Мы поддерживаем профессиональное развитие студентов и рассказываем о возможностях дальнейшего сотрудничества с академией.</p></details>
+<details><summary>Можно ли устроиться работать в UsPirit Academy?</summary><p>Для перспективных выпускников есть возможность рассмотреть сотрудничество с командой. Решение зависит от компетенций и актуальных вакансий.</p></details>
+<details><summary>Как узнать о ближайшем наборе?</summary><p>Через официальный Telegram-бот академии или у менеджера.</p></details>
+</div></section>
+
+<section id="join"><div class="w"><div class="cta">
+<h2>Присоединяйся к UsPirit Academy</h2>
+<p>Освой современную digital-профессию, научись продвигать проекты или развивать собственное дело. Первый шаг можно сделать сегодня.</p>
+<a class="btn" href="https://t.me/uspirit_bot">Открыть Telegram-бота</a>
+<a class="btn y" href="https://instagram.com/uspirit.academy">Instagram</a>
+</div></div></section>
+</main>
+
+<footer><div class="w"><span>UsPirit Academy / Marketing Way</span><span>Знания · Люди · Будущее</span><span><a href="https://t.me/uspirit_bot">Telegram-бот</a> · Instagram: @uspirit.academy</span></div></footer>
+<script>
+(function(){
+var d=document,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var bar=d.getElementById('bar'),hero=d.querySelector('.hero .w');
+function onScroll(){var h=d.documentElement.scrollHeight-innerHeight,y=scrollY;bar.style.transform='scaleX('+(h>0?y/h:0)+')';if(!rm&&hero&&y<innerHeight){hero.style.transform='translateY('+(y*.18)+'px)';hero.style.opacity=Math.max(0,1-y/(innerHeight*.9));}}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+if(rm||!('IntersectionObserver' in window))return;
+d.documentElement.classList.add('js');
+var els=d.querySelectorAll('section h2,.lead,.card,.feat li,details,.story,.team,.cta');
+els.forEach(function(e){var i=Array.prototype.indexOf.call(e.parentNode.children,e);e.style.transitionDelay=Math.min(i,5)*80+'ms';e.classList.add('rv');});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.intersectionRatio>=.15){x.target.classList.add('in');}else if(x.intersectionRatio===0){x.target.classList.remove('in');}});},{threshold:[0,.15],rootMargin:'0px 0px -8% 0px'});
+els.forEach(function(e){io.observe(e);});
+function count(el){var t=el.dataset.t||(el.dataset.t=el.textContent);cancelAnimationFrame(el._r);var n=parseInt(t.replace(/\D/g,''),10);if(!n)return;var s=t.replace(/[\d\s\u00a0]/g,''),t0=null;function f(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1),v=Math.round(n*(1-Math.pow(1-p,3)));el.textContent=v.toLocaleString('ru-RU')+(s?'\u00a0'+s:'');if(p<1)el._r=requestAnimationFrame(f);}el._r=requestAnimationFrame(f);}
+var co=new IntersectionObserver(function(es){es.forEach(function(x){if(x.intersectionRatio>=.6){count(x.target);}else if(x.intersectionRatio===0){cancelAnimationFrame(x.target._r);if(x.target.dataset.t)x.target.textContent=x.target.dataset.t;}});},{threshold:[0,.6]});
+d.querySelectorAll('.stat b,.ab i').forEach(function(e){co.observe(e);});
+})();
+</script>
+</body>
+</html>
